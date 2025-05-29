@@ -1,0 +1,19 @@
+import torch
+from torch import nn
+
+class ProjectedLinearAG(torch.autograd.Function):
+    @staticmethod
+    def forward(ctx, input, weight, Qin, Qout):
+        ctx.save_for_backward(input, weight, Qin, Qout)
+        return input @ weight.T
+
+    @staticmethod
+    def backward(ctx, grad_output):
+        x, w, Qin, Qout = ctx.saved_tensors
+        grad_input = grad_output @ w
+        grad_weight = grad_output.view(-1, grad_output.shape[-1]).T @ x.view(-1, x.shape[-1])
+        grad_weight = Qout.T @ grad_weight @ Qin
+        return grad_input, grad_weight, None, None
+        
+
+class ProjectedLinear

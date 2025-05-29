@@ -4,7 +4,7 @@ This repository contains code for Yet Another Quantization Algorithm (YAQA), a q
 YAQA reduces the KL divergence to the original model by a factor of 1/3 over LDLQ/GPTQ across a wide range of models and quantizers, translating to state of the art performance on downstream tasks.
 For more details, see the paper.
 
-<img src="assets/comp.png" width="500">
+<img src="assets/comp.png" width="800">
 
 ## How to use this codebase
 

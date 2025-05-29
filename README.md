@@ -10,9 +10,8 @@ For more details, see the paper.
 
 This codebase is based off of the [QTIP](https://github.com/Cornell-RelaxML/qtip) codebase, with modifications made to support YAQA's quantization algorithm.
 To collect Hessians, see the `README` in `hessian_llama/`.
-Precomputed Hessians with "sketch B" can be found on our [Huggingface page](https://huggingface.co/relaxml).
 To quantize models, follow the instructions in the [QTIP codebase](https://github.com/Cornell-RelaxML/qtip).
-Prequantized models and and Sketch-B Hessians (see paper) can be found [here](https://huggingface.co/collections/relaxml/yaqa-6837d4c8896eb9ceb7cb899e).
+Prequantized models and Sketch-B Hessians (see paper) can be found [here](https://huggingface.co/collections/relaxml/yaqa-6837d4c8896eb9ceb7cb899e).
 
 ## Other
 

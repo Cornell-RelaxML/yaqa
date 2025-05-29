@@ -4,7 +4,7 @@ As a guide, we were able to fit models under ~20B parameters on a single 8x80G n
 This script processes layers independently so if you are on a cluster with a shared filesystem you can launch jobs in parallel across subsets of layers.
 We do not recommend using `cpu_offload` unless it is faster to move things to CPU on your machine than recomputing gradients.
 Accumulating in FP64 is not necessary but may give slight improvements in quantization performance. 
-The actual Hessian collection computation still happens in FP32 *per sample*, but if for some reason your model requires FP64 you may also want to change [the computation](https://github.com/tsengalb99/qtip_2hess/blob/d627a60eb408c35e79b762a52455faa3e082c70a/hessian_llama/custom_linear_B.py#L61) to FP64 as well.
+The actual Hessian collection computation still happens in FP32 *per sample*, but if for some reason your model requires FP64 you may also want to change [the computation](https://github.com/Cornell-RelaxML/yaqa/blob/01763b16556031981b0d73ce2b802b56bfa1efea/hessian_llama/custom_linear_B.py#L61) to FP64 as well.
 We recommend using Sketch B if you can afford it.
 
 ## Sketch A

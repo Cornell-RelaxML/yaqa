@@ -1,4 +1,4 @@
-# [Model-Preserving Adaptive Rounding](https://arxiv.org/abs/2505.FIX)
+# [Model-Preserving Adaptive Rounding](https://arxiv.org/abs/2505.22988)
 
 This repository contains code for Yet Another Quantization Algorithm (YAQA), a quantization framework that uses a Kronecker-factored approximation of the layerwise Hessian with respect to the full-model KL divergence to better preserve model outputs after quantization.
 YAQA reduces the KL divergence to the original model by a factor of 1/3 over LDLQ/GPTQ across a wide range of models and quantizers, translating to state of the art performance on downstream tasks.
@@ -17,14 +17,14 @@ Prequantized models and Sketch-B Hessians (see paper) can be found [here](https:
 
 If you found this work useful, please consider citing
 ```
-@misc{tseng2024yaqa,
-      title={Model-Preserving Adaptive Rounding},
+@misc{tseng2025modelpreservingadaptiverounding,
+      title={Model-Preserving Adaptive Rounding}, 
       author={Albert Tseng and Zhaofeng Sun and Christopher De Sa},
       year={2025},
-      eprint={2505.},
+      eprint={2505.22988},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
-      url={https://arxiv.org/abs/}, 
+      url={https://arxiv.org/abs/2505.22988}, 
 }
 ```
 
